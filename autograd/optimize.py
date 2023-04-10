@@ -39,8 +39,10 @@ class Optimizer():
         while count < self.max_iter:
 
             prev_loss, prev_grad = self.loss_func(self.params)
+            print(prev_loss)
             self.step()
             new_loss, new_grad = self.loss_func(self.params)
+            print(new_loss)
             if return_steps:
                 steps.append(self.params)
 
